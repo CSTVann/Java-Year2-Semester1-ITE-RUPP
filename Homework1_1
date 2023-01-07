@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Exercise1 {
+    public static void main(String[] String)
+    {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a: ");
+        double a = input.nextDouble();
+        System.out.print("Enter b: ");
+        double b = input.nextDouble();
+        System.out.print("Enter c: ");
+        double c = input.nextDouble();
+
+        double Result = b*b - 4 * a * c;
+
+        if (Result > 0)
+        {
+            double x1 = (-b + Math.sqrt(Result))/(2 * a);
+            double x2 = (-b - Math.sqrt(Result))/(2 * a);
+            System.out.print("The result are X1 = " + x1 + " and X2 = " + x2);
+        }   else if (Result == 0)
+        {
+            double x1 = -b / (2 * a);
+            System.out.print("The result is: " + x1);
+        }   else
+        {
+            System.out.print("The result has no value");
+        }
+    }
+}
