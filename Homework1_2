@@ -1,0 +1,72 @@
+import java.util.Scanner;
+public class Homework1_2 {
+    public static void main(String args[])
+    {//Scanner is a class we use to allow user to input
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter R to calculate perimeter and area of Rectangle");
+        System.out.println("Enter P to calculate perimeter and area of Parallelogram");
+        System.out.println("Enter E to calculate perimater and area of Ellipse");
+        System.out.print("Enter your choice: ");
+        char choice = in.next().charAt(0);
+        //charAt id method we use to return the characte that specify indix in string
+        //Scanner.next we use to find the next token from the Scanner
+
+        switch(choice)
+        {
+            case 'R':
+                System.out.print("Enter Width of rectangle: ");
+                double R = in.nextDouble();
+                System.out.print("Enter Length of rectangle: ");
+                double P = in.nextDouble();
+                double ra = P * R;
+                double v = P + R;
+                double pa = 2*v;
+                if (P>0 && R>0){
+                System.out.println("Area of Rectangle = " + ra);
+                System.out.println("Perimeter of Rectangle = " + pa);
+                }   else {
+                    System.out.println("None Perimeter and Area");
+                }
+                break;
+
+            case 'P':
+                System.out.print("Enter Base of Parallelgram: ");
+                double D = in.nextDouble();
+                System.out.print("Enter Side of Parallelgram: ");
+                double E = in.nextDouble();
+                System.out.print("Enter Height of Parallelgram: ");
+                double B = in.nextDouble();
+                double v2= 2*D ;
+                double v3 = 2*E;
+                double paa = v2+v3;
+                double pac = 2 * B;
+                if (E>0 && D>0 && B>0){
+                System.out.println("Area of Parallelgram = " + pac);
+                System.out.println("Perimeter of Parallelgram = " + paa);
+                }   else {
+                    System.out.println("None Perimeter and Area");
+                }
+                break;
+
+            case 'E':
+                System.out.print("Enter Axis of Ellipse: ");
+                double H = in.nextDouble();
+                System.out.print("Enter Axis of Ellipse: ");
+                double I = in.nextDouble();
+                double are = 3.14 * I * H;
+                if (H>0 && I>0){
+                    System.out.println("Area of Ellipse = " +are);
+                    System.out.println("Ellipse none perimeter");
+                }   else {
+                    System.out.println("None Perimeter and Area");
+                }
+                break;
+        
+
+
+            default:
+                System.out.println("Wrong choice");
+        }
+
+    }
+}
